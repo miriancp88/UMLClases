@@ -44,13 +44,13 @@ Conference -- BoardMeeting
 Person <|-- Member
 Member <|-- BoardMember
 
-AAUOC o-- Location
-AAUOC o-- Event
-AAUOC o-- Person
-Event -- Member
-Event -- Location
-Conference -- Person
-BoardMember -- BoardMeeting
+AAUOC  o-- "0..*" Location
+AAUOC o-- "0..*" Event
+AAUOC o-- "0..*" Person
+Event "0..* attendsTo" -- "0..*" Member
+Event"0..* isLocatedIn" --"1" Location
+Conference "0..* attendsTo" -- "0..*" Person
+BoardMember "0..* attendsTo" -- "0..*" BoardMeeting
 
 
 @enduml
