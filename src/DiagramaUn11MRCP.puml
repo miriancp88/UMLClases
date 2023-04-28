@@ -1,27 +1,40 @@
 @startuml
 
 class Member{
+e-mail:String
 }
 
 class BoardMember{
 }
 
 class Event{
+date : Date
+description : String
+assign(I:Location):void
 }
 
 class Conference{
+max_attendees:Interge
 }
 
 class BoardMeeting{
 }
 
 class Location{
+description:String
+addrees:String
 }
 
 class Person{
+name:String
 }
 
 class AAUOC{
+newLocation(I:Location):void
+newEvent(e:Event):void
+newPerson(p:Person):void
+informEvent(e:Event):void
+register(m:Member, e:Event):void
 }
 
 Event <|-- Conference
