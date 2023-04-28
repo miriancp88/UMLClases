@@ -31,5 +31,13 @@ Conference -- BoardMeeting
 Person <|-- Member
 Member <|-- BoardMember
 
+AAUOC o-- Location
+AAUOC o-- Event
+AAUOC o-- Person
+Event -- Member
+Event -- Location
+Conference -- Person
+BoardMember -- BoardMeeting
+
 
 @enduml
