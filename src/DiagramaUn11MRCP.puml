@@ -25,6 +25,8 @@ Event <|-- Conference
 Event <|-- BoardMeeting
 Conference -- BoardMeeting
 
+Person <|-- Member
+Member <|-- BoardMember
 
 
 @enduml
